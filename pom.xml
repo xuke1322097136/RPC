@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xk.learning</groupId>
+    <artifactId>rpc-learning</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+
+        <!-- 引入内嵌的tomcat -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>9.0.12</version>
+        </dependency>
+
+        <!-- apache 的io工具包，还是挺好用的 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- mysql-connector-java 和下面的sqlite 驱动主要是用来观察JAVA SPI用的，因为可以看到在对应的jar包的
+        META-INF/services下面有个java.sql.Driver，同理，sqlite-jdbc也是一样的，也有一个java.sql.Driver，然后
+        该文件里面的内容就是不同驱动具体的实现类。
+        -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.32.3.2</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
